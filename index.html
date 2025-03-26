@@ -18,6 +18,7 @@
 							<div id="menu">
 								<ul>
 									<li><a href="index.html">Home</a></li>
+									<li><a href="TheStudy.html">The Heart Health Digital Twin Study</a></li>
 								</ul>
 							</div>
 						</li>
@@ -90,6 +91,132 @@
 			</section>
 
 
+			<section id="clinic-home-tables" class="wrapper style2 special">
+				<div class="inner">
+				  <header class="major">
+					<h2>In-Clinic vs. At-Home Study Components</h2>
+					<p>Click the icons below to explore what each setting involves.</p>
+				  </header>
+			  
+				  <div>
+					<span class="icon-button" onclick="showTable('home')">🏠 Home</span>
+					<span class="icon-button" onclick="showTable('clinic')">🏥 Clinic</span>
+				  </div>
+			  
+				  <div class="table-container">
+					<table id="homeTable" class="hidden dark-table">
+					  <tr>
+						<th>Study Test</th><th>How is this done?</th><th>What’s it for?</th>
+					  </tr>
+					  <tr><td>Health History, Mental Health, and Lifestyle</td><td>Standardized questionnaires completed remotely.</td><td>Builds a comprehensive health profile.</td></tr>
+					  <tr><td>Multiomics tests</td><td>Small blood drops collected at home for multiomics profiling.</td><td>Analyzes thousands of blood chemicals to track early disease-related changes.</td></tr>
+					  <tr><td>Microbiome (gut and oral)</td><td>Home kits for stool and saliva collection.</td><td>Examines how bacteria in gut/mouth affect health.</td></tr>
+					  <tr><td>Lifestyle, activity, and current health</td><td>Ongoing smartphone questionnaires (activity, sleep, stress, nutrition).</td><td>Explores how daily habits affect overall health.</td></tr>
+					  <tr><td>Sensors and Devices</td><td>Wearables and at-home sensors that record activity/environment data.</td><td>Offers continuous health and lifestyle tracking.</td></tr>
+					</table>
+			  
+					<table id="clinicTable" class="hidden dark-table">
+					  <tr>
+						<th>Study Test</th><th>How is this done?</th><th>What’s it for?</th>
+					  </tr>
+					  <tr><td>Vitals, physical function, and clinical lab tests</td><td>Standard measures like height, weight, blood pressure, pulse, lung function, exercise capacity, and blood tests during a study visit.</td><td>Provides established health markers — a baseline for model building.</td></tr>
+					  <tr><td>Whole body MRI Imaging</td><td>Non-invasive MRI imaging of brain, heart, body composition, and other organs.</td><td>Offers precise body/organ function assessment and early detection of changes.</td></tr>
+					  <tr><td>Retinal Imaging</td><td>Quick eye scan, similar to an optician visit.</td><td>Reveals vascular health through retina; detects diseases like diabetic retinopathy.</td></tr>
+					  <tr><td>Genetic analysis</td><td>Blood sample used for genetic analysis.</td><td>Links diseases to gene signatures; provides foundational genetic data.</td></tr>
+					</table>
+				  </div>
+				</div>
+			  </section>
+			  
+			  <style>
+				.icon-button {
+				  font-size: 28px;
+				  cursor: pointer;
+				  margin-right: 20px;
+				  background: rgb(22, 27, 86);
+				  border: 1px solid #ccc;
+				  border-radius: 8px;
+				  padding: 10px 15px;
+				  transition: background 0.2s;
+				  display: inline-block;
+				}
+				.icon-button:hover {
+				  background: #3d70b9;
+				}
+				.table-container {
+				  margin-top: 30px;
+				  overflow-x: auto;
+				}
+				table.dark-table {
+				  width: 100%;
+				  border-collapse: collapse;
+				  margin-top: 10px;
+				  background-color: #222;
+				  color: #fff;
+				}
+				table.dark-table th, table.dark-table td {
+				  border: 1px solid #444;
+				  padding: 10px;
+				  text-align: left;
+				}
+				table.dark-table th {
+				  background-color: #333;
+				}
+				.hidden {
+				  display: none;
+				}
+			  </style>
+			  
+			  <script>
+				function showTable(type) {
+				  document.getElementById('homeTable').classList.add('hidden');
+				  document.getElementById('clinicTable').classList.add('hidden');
+				  if (type === 'home') {
+					document.getElementById('homeTable').classList.remove('hidden');
+				  } else if (type === 'clinic') {
+					document.getElementById('clinicTable').classList.remove('hidden');
+				  }
+				}
+			  </script>
+
+			<section class="wrapper style2 special">
+				<div class="inner">
+				  <header class="major">
+					<h2>At-home Tests</h2>
+				  </header>
+			  
+				  <div class="gallery">
+					<div class="card" onclick="showDescription('oura')">
+					  <img src="images/product_oura.png" alt="Oura Ring">
+					</div>
+					<div class="card" onclick="showDescription('OneDraw')">
+					  <img src="images/product_OneDraw.png" alt="OneDraw">
+					</div>
+					<div class="card" onclick="showDescription('Dexcom')">
+					  <img src="images/product_Dexcom.png" alt="Dexcom CGM">
+					</div>
+					<div class="card" onclick="showDescription('MIR')">
+					  <img src="images/product_MIR.png" alt="MIR Spirometer">
+					</div>
+					<div class="card" onclick="showDescription('withings')">
+					  <img src="images/product_withings.png" alt="Withings Smart Scale">
+					</div>
+					<div class="card" onclick="showDescription('bp_withings')">
+					  <img src="images/product_bp_withings.png" alt="Withings BP Monitor">
+					</div>
+					<div class="card" onclick="showDescription('PorpleAir')">
+					  <img src="images/product_PorpleAir.png" alt="PurpleAir Monitor">
+					</div>
+					<div class="card" onclick="showDescription('Silicon_band')">
+					  <img src="images/product_Silicon_band.png" alt="Silicone Wristband">
+					</div>
+				  </div>
+			  
+				  <div class="shared-description" id="sharedDescription">
+					Click a product above to view its description.
+				  </div>
+				</div>
+			</section>
 
 
 			<section id="three" class="wrapper style3 special">
@@ -121,5 +248,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/devices.js"></script>
 	</body>
 </html>
