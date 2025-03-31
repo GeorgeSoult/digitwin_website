@@ -2976,6 +2976,8 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
+			padding-left: 4em;
+			padding-right: 4em;
 			background-color: #2e3842;
 		}
 
