@@ -3,7 +3,7 @@ const descriptions = {
 blood oxygen, body temperature, and sleep measurements throughout the day. These metrics
 are available via a mobile app that organizes your data into easy-to-understand reports.`,
 
-  Tasso Mini: `Tasso Mini At-Home Blood Collection Device – The Tasso Mini is a small, lightweight,
+  TassoMini: `Tasso Mini At-Home Blood Collection Device – The Tasso Mini is a small, lightweight,
 single-use device that attaches to the upper arm. By pressing a button on the device, a
 virtually painless capillary blood sample is collected on a cartridge within the device. The
 stable, dried, blood sample within the cartridge is then mailed to the study team for multiomics analysis.`,
