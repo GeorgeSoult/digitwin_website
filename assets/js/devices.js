@@ -8,6 +8,13 @@ single-use device that attaches to the upper arm. By pressing a button on the de
 virtually painless capillary blood sample is collected on a cartridge within the device. The
 stable, dried, blood sample within the cartridge is then mailed to the study team for multiomics analysis.`,
 
+  AtHomeBlood: `At-Home Dried Blood Collection - Participants will self-collect a small blood sample at home
+using a fingertip lancet and specialized collection card. Once dried, the sample is mailed for laboratory analysis. 
+These dried blood spots will be used to assess a broad set of health indicators, including cardiometabolic risk, 
+hormone levels, thyroid function, nutritional status, organ function, and systemic inflammation. A subset of samples 
+will also undergo epigenetic analysis to estimate biological age, pace of aging, and immune system aging based on DNA 
+methylation patterns.`,
+
   Dexcom: `Dexcom Stelo CGM – The Stelo Glucose Biosensor is a continuous glucose monitoring
 technology from Dexcom and is simple and painless to apply. By sending glucose levels directly to
 your smartphone, the allows you to see connections between your daily lifestyle choices and
