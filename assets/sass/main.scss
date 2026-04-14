@@ -1930,4 +1930,145 @@
 				background-color: darken(_palette(bg), 8);
 			}
 		}
+
+/* ======================================
+   DIGITWIN PROJECT CUSTOM STYLES
+   ====================================== */
+
+// Quote Section Styles
+.quote-section {
+	padding: 2rem 1rem !important;
+	
+	.quote-image-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		
+		img {
+			max-width: 60%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+	}
+	
+	.quote-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		
+		blockquote {
+			font-size: 1.4rem;
+			line-height: 1.4;
+			margin-bottom: 0.5rem;
+			font-style: italic;
+			color: _palette(fg);
+			border-left: 4px solid _palette(accent2, bg); // Using accent2 (#00ffcc) for quotes
+			padding-left: 1.5rem;
+			font-weight: 400;
+			background: rgba(0, 255, 204, 0.05);
+			padding: 1.5rem;
+			margin: 1rem 0;
+		}
+		
+		.quote-attribution {
+			font-size: 1.2rem;
+			font-weight: 400;
+			color: #d3d0d0;
+			margin-bottom: 1rem;
+		}
+		
+		.quote-description {
+			font-size: 1.1rem;
+			font-weight: 400;
+			color: #eeecec;
+			margin-bottom: 0.75rem;
+		}
+		
+		.quote-link {
+			margin-top: 0.5rem;
+			
+			a {
+				text-decoration: none;
+				color: _palette(accent1, bg); // Using accent1 (#21b2a6) for links
+				font-weight: 600;
+				transition: color 0.3s ease;
+				
+				&:hover {
+					color: _palette(accent2, bg); // Hover to accent2 (#00ffcc)
+				}
+			}
+		}
+	}
+}
+
+// Enhanced Button Styles
+.enhanced-button {
+	.button.primary {
+		background-color: _palette(accent1, bg);
+		border: 2px solid _palette(accent1, bg);
+		color: white;
+		font-weight: 600;
+		padding: 1rem 2rem;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		
+		&:hover {
+			background-color: _palette(accent2, bg);
+			border-color: _palette(accent2, bg);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(33, 178, 166, 0.3);
+		}
+	}
+}
+
+// Image Enhancements  
+.enhanced-image {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+	}
+}
+
+// Section Headers with Accent Colors
+.section-header-accent {
+	h2 {
+		color: _palette(accent1, bg);
+		
+		&::after {
+			content: '';
+			display: block;
+			width: 60px;
+			height: 3px;
+			background: linear-gradient(90deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 100%);
+			margin: 0.5rem auto;
+		}
+	}
+}
+
+// Responsive adjustments
+@include breakpoint(small) {
+	.quote-section {
+		.quote-image-container img {
+			max-width: 90%;
+		}
+		
+		.quote-content {
+			blockquote {
+				font-size: 1.2rem;
+				padding: 1rem;
+			}
+			
+			.quote-attribution {
+				font-size: 1.1rem;
+			}
+			
+			.quote-description {
+				font-size: 1rem;
+			}
+		}
+	}
+}
 	}
