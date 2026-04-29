@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Media Coverage - Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── Media Coverage custom styles ── */
+
+			/* Press cards */
+			.mc-press-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 1.8rem;
+				margin-top: 0.5rem;
+			}
+			.mc-press-card {
+				border-radius: 14px;
+				overflow: hidden;
+				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.1);
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				display: flex;
+				flex-direction: column;
+			}
+			.mc-press-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+			}
+			.mc-press-card .mc-press-img {
+				width: 100%;
+				aspect-ratio: 16/9;
+				object-fit: cover;
+				object-position: top;
+				display: block;
+				border-bottom: 1px solid rgba(255,255,255,0.07);
+			}
+			.mc-press-card .mc-press-body {
+				padding: 1.1rem 1.2rem 1.4rem;
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+			.mc-press-badge {
+				display: inline-block;
+				background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+				color: #fff;
+				border-radius: 999px;
+				padding: 0.2rem 0.75rem;
+				font-size: 0.72rem;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				margin-bottom: 0.8rem;
+				width: fit-content;
+			}
+			.mc-press-card blockquote {
+				border-left: 3px solid rgba(92,107,192,0.6);
+				margin: 0 0 0.9rem;
+				padding: 0.2rem 0 0.2rem 0.9rem;
+				font-style: italic;
+				font-size: 0.9rem;
+				line-height: 1.55;
+				opacity: 0.9;
+			}
+			.mc-press-card .mc-press-desc {
+				font-size: 0.82rem;
+				opacity: 0.65;
+				line-height: 1.55;
+				flex: 1;
+				margin-bottom: 1rem;
+			}
+			.mc-press-link {
+				display: inline-block;
+				background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+				color: #fff !important;
+				border-radius: 999px;
+				padding: 0.38rem 1.1rem;
+				font-size: 0.8rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-decoration: none !important;
+				width: fit-content;
+				transition: opacity 0.2s ease, transform 0.2s ease;
+			}
+			.mc-press-link:hover {
+				opacity: 0.85;
+				transform: translateY(-1px);
+			}
+
+			.mc-section-label {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				margin: 2.5rem 0 1.25rem;
+			}
+			.mc-section-label .mc-icon {
+				width: 2.4rem;
+				height: 2.4rem;
+				border-radius: 50%;
+				background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				box-shadow: 0 2px 12px rgba(92,107,192,0.45);
+			}
+			.mc-section-label .mc-icon svg {
+				width: 1.1rem;
+				height: 1.1rem;
+				fill: #fff;
+			}
+			.mc-section-label h3 {
+				margin: 0;
+				border: none;
+				font-size: 1.35rem;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+			}
+
+			/* Podcast card */
+			.mc-podcast-card {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				background: linear-gradient(135deg, rgba(92,107,192,0.12), rgba(156,39,176,0.08));
+				border: 1px solid rgba(92,107,192,0.3);
+				border-radius: 14px;
+				padding: 1.4rem 1.8rem;
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				text-decoration: none !important;
+				color: inherit;
+				margin-bottom: 0.5rem;
+			}
+			.mc-podcast-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 28px rgba(92,107,192,0.25);
+				text-decoration: none !important;
+			}
+			.mc-podcast-card .mc-podcast-art {
+				width: 4.5rem;
+				height: 4.5rem;
+				border-radius: 12px;
+				background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				box-shadow: 0 4px 14px rgba(92,107,192,0.4);
+			}
+			.mc-podcast-card .mc-podcast-art svg {
+				width: 2rem;
+				height: 2rem;
+				fill: #fff;
+			}
+			.mc-podcast-card .mc-podcast-info {
+				flex: 1;
+			}
+			.mc-podcast-card .mc-podcast-info strong {
+				display: block;
+				font-size: 1rem;
+				margin-bottom: 0.3rem;
+				color: #fff;
+			}
+			.mc-podcast-card .mc-podcast-info span {
+				font-size: 0.82rem;
+				opacity: 0.7;
+			}
+			.mc-podcast-badge {
+				background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+				color: #fff !important;
+				border-radius: 999px;
+				padding: 0.35rem 1rem;
+				font-size: 0.78rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				white-space: nowrap;
+				flex-shrink: 0;
+			}
+
+			/* Video grid */
+			.mc-video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 1.8rem;
+				margin-top: 0.5rem;
+			}
+			.mc-video-card {
+				border-radius: 14px;
+				overflow: hidden;
+				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.1);
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
+				display: flex;
+				flex-direction: column;
+			}
+			.mc-video-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+			}
+			.mc-video-card .mc-video-wrapper {
+				position: relative;
+				width: 100%;
+				padding-top: 56.25%; /* 16:9 */
+				background: #000;
+			}
+			.mc-video-card .mc-video-wrapper iframe {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				border: none;
+				display: block;
+			}
+			.mc-video-card .mc-video-title {
+				padding: 0.85rem 1rem 1rem;
+				font-size: 0.88rem;
+				font-weight: 600;
+				line-height: 1.4;
+				opacity: 0.9;
+				border-top: 1px solid rgba(255,255,255,0.07);
+			}
+
+			/* External / link-out video card */
+			.mc-video-card.mc-external .mc-video-wrapper {
+				background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				text-decoration: none;
+			}
+			.mc-video-card.mc-external .mc-video-wrapper a {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 0.6rem;
+				text-decoration: none;
+			}
+			.mc-video-card.mc-external .mc-play-btn {
+				width: 3.5rem;
+				height: 3.5rem;
+				border-radius: 50%;
+				background: rgba(255,255,255,0.15);
+				border: 2px solid rgba(255,255,255,0.4);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: background 0.2s ease, transform 0.2s ease;
+				backdrop-filter: blur(4px);
+			}
+			.mc-video-card.mc-external:hover .mc-play-btn {
+				background: rgba(92,107,192,0.55);
+				border-color: rgba(92,107,192,0.9);
+				transform: scale(1.1);
+			}
+			.mc-video-card.mc-external .mc-play-btn svg {
+				width: 1.4rem;
+				height: 1.4rem;
+				fill: #fff;
+				margin-left: 3px;
+			}
+			.mc-video-card.mc-external .mc-ext-label {
+				font-size: 0.72rem;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: rgba(255,255,255,0.55);
+			}
+			.mc-video-card.mc-external .mc-network-badge {
+				position: absolute;
+				top: 0.7rem;
+				left: 0.7rem;
+				background: #003087;
+				color: #fff;
+				font-size: 0.68rem;
+				font-weight: 800;
+				letter-spacing: 0.06em;
+				padding: 0.2rem 0.55rem;
+				border-radius: 4px;
+				text-transform: uppercase;
+			}
+
+			.mc-divider {
+				border: none;
+				border-top: 1px solid rgba(255,255,255,0.1);
+				margin: 2.5rem 0;
+			}
+
+			.mc-outro {
+				text-align: center;
+				font-style: italic;
+				opacity: 0.6;
+				font-size: 0.92rem;
+				margin-top: 2rem;
+			}
+
+			@media (max-width: 640px) {
+				.mc-podcast-card { flex-wrap: wrap; }
+				.mc-podcast-badge { margin-top: 0.5rem; }
+				.mc-video-grid { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mount Sinai DigiTwin</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">DigiTwin Project</a></li>
+											<li><a href="media_coverage.html">Media Coverage</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Media Coverage</h2>
+							<p>Our work has been featured across leading health, science &amp; technology platforms</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<!-- Press & Publications -->
+								<div class="mc-section-label">
+									<div class="mc-icon">
+										<!-- newspaper icon -->
+										<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></svg>
+									</div>
+									<h3>Press &amp; Publications</h3>
+								</div>
+
+								<p>Our team's breakthroughs have been featured in world-leading publications, highlighting the science and vision behind the DigiTwin Project.</p>
+
+								<div class="mc-press-grid">
+
+									<div class="mc-press-card">
+										<img class="mc-press-img" src="images/time_magazine_article.png" alt="TIME Magazine article featuring Zahi Fayad on health metrics and longevity" />
+										<div class="mc-press-body">
+											<span class="mc-press-badge">TIME Magazine</span>
+											<blockquote>"Let's say you are stable, stable, stable, then suddenly start seeing a small dip in some measurements. That dip is presymptomatic, by the way … That's when I want to intervene." — Zahi Fayad</blockquote>
+											<p class="mc-press-desc">Tracking health metrics and their role in longevity — an interview with Dr. Zahi Fayad on the future of preventive, data-driven healthcare.</p>
+											<a class="mc-press-link" href="https://time.com/7324741/health-metrics-tracking-live-longer/" target="_blank" rel="noopener">Read in TIME &rarr;</a>
+										</div>
+									</div>
+
+									<div class="mc-press-card">
+										<img class="mc-press-img" src="images/nature_article.png" alt="Nature journal article on Mount Sinai healthspan research" />
+										<div class="mc-press-body">
+											<span class="mc-press-badge">Nature</span>
+											<blockquote>"Mount Sinai Researchers Featured in Nature for Advancing Healthspan Science"</blockquote>
+											<p class="mc-press-desc">Nature published a sponsored feature highlighting Mount Sinai's leadership in redefining ageing through the XPRIZE Healthspan initiative, showcasing the work of Drs. Miriam Merad, Zahi Fayad, and Fanny Elahi.</p>
+											<a class="mc-press-link" href="https://www.nature.com/articles/d42473-025-00259-8" target="_blank" rel="noopener">Read in Nature &rarr;</a>
+										</div>
+									</div>
+
+								</div>
+
+								<hr class="mc-divider" />
+
+								<!-- Podcasts -->
+								<div class="mc-section-label">
+									<div class="mc-icon">
+										<!-- microphone icon -->
+										<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm6.5 9a.5.5 0 0 1 .5.5C19 14.09 15.94 17.5 12 17.5S5 14.09 5 10.5a.5.5 0 0 1 1 0C6 13.54 8.69 16.5 12 16.5s6-2.96 6-6a.5.5 0 0 1 .5-.5zM11 19.93V22h2v-2.07A8.01 8.01 0 0 0 20 12h-2a6 6 0 0 1-12 0H4a8.01 8.01 0 0 0 7 7.93z"/></svg>
+									</div>
+									<h3>Podcast Features</h3>
+								</div>
+
+								<p>Our project has been featured in leading health and wellness podcasts, exploring the implications of digital twin technology for personalized healthcare.</p>
+
+								<a class="mc-podcast-card" href="https://podcasts.apple.com/ca/podcast/wellbeing-longevity-optimizing-healthspan-with-mt-sinai/id1520232019?i=1000763435120" target="_blank" rel="noopener">
+									<div class="mc-podcast-art">
+										<!-- headphones icon -->
+										<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5v-1a7 7 0 0 1 14 0v1h-1a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9z"/></svg>
+									</div>
+									<div class="mc-podcast-info">
+										<strong>Wellbeing &amp; Longevity: Optimizing Healthspan</strong>
+										<span>Mt. Sinai &mdash; Apple Podcasts</span>
+									</div>
+									<span class="mc-podcast-badge">Listen &rarr;</span>
+								</a>
+
+								<hr class="mc-divider" />
+
+								<!-- Videos -->
+								<div class="mc-section-label">
+									<div class="mc-icon">
+										<!-- play icon -->
+										<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+									</div>
+									<h3>Video Coverage</h3>
+								</div>
+
+								<p>Watch our team discuss the latest developments in digital twin technology and its applications in healthcare through these featured video interviews and presentations.</p>
+
+								<div class="mc-video-grid">
+
+									<div class="mc-video-card">
+										<div class="mc-video-wrapper">
+											<iframe
+												src="https://www.youtube.com/embed/UhnYHxAYZco?rel=0"
+												title="Digital Twin Technology Overview"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+												allowfullscreen
+												loading="lazy">
+											</iframe>
+										</div>
+										<div class="mc-video-title">Digital Twin Technology Overview</div>
+									</div>
+
+									<div class="mc-video-card">
+										<div class="mc-video-wrapper">
+											<iframe
+												src="https://www.youtube.com/embed/Nz9bwZ1XK-o?rel=0"
+												title="Healthcare Applications of Digital Twins"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+												allowfullscreen
+												loading="lazy">
+											</iframe>
+										</div>
+										<div class="mc-video-title">Healthcare Applications of Digital Twins</div>
+									</div>
+
+									<div class="mc-video-card">
+										<div class="mc-video-wrapper">
+											<iframe
+												src="https://www.youtube.com/embed/180DInDWERg?rel=0"
+												title="Future of Personalized Medicine"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+												allowfullscreen
+												loading="lazy">
+										</iframe>
+										</div>
+										<div class="mc-video-title">Future of Personalized Medicine</div>
+									</div>
+
+									<div class="mc-video-card mc-external">
+										<div class="mc-video-wrapper">
+											<a href="https://www.cbs19.tv/video/news/local/wearable-wellness-technology-trending-as-christmas-wish/501-c99aa857-f8ab-4bc8-8b6a-1e081668d577" target="_blank" rel="noopener">
+												<span class="mc-network-badge">CBS19</span>
+												<div class="mc-play-btn">
+													<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+												</div>
+												<span class="mc-ext-label">Watch Interview</span>
+											</a>
+										</div>
+										<div class="mc-video-title">Wearable Wellness Technology — CBS19 Interview</div>
+									</div>
+
+								</div>
+
+								<p class="mc-outro">These media appearances showcase our commitment to advancing digital twin technology and its potential to revolutionize healthcare through personalized treatment approaches.</p>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
